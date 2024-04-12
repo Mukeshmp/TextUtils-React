@@ -6,11 +6,11 @@ import TextArea from './Components/TextArea';
 import Alert from './Components/Alert';
 import React, { useState } from 'react'
 import Blink from './Components/Blink';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+// } from "react-router-dom";
 
 
 function App() {
@@ -40,7 +40,7 @@ function App() {
   }
   return (
     <>
-      <Router>
+      {/* <Router>
         <Navbar title='TextUtils' link='About' mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
         <Blink />
@@ -51,7 +51,12 @@ function App() {
               <TextArea heading='Enter the text here: ' mode={mode} showAlert={showAlert} />
             </div>}/>
         </Routes>
-      </Router>
+      </Router> */}
+      <Navbar title='TextUtils' link='About' mode={mode} toggleMode={toggleMode} />
+      <Alert alert={alert} />
+      <div className="container my-3">
+        <TextArea heading='Enter the text here: ' mode={mode} showAlert={showAlert} />
+      </div>
     </>
   );
 }
